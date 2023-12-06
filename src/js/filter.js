@@ -1,6 +1,7 @@
 const sortAscButtonCatalog = document.querySelector(".catalog-sort-asc");
 const sortDescButtonCatalog = document.querySelector(".catalog-sort-desc");
-const filterbtn = document.querySelector(".catalog-filter");
+const from = document.querySelector(".catalog-from");
+const to = document.querySelector(".catalog-to");
 const container = document.querySelector(".catalog");
 const reset = document.querySelector(".catalog-reset");
 
@@ -34,14 +35,8 @@ function setCatalogItems(newItems) {
 
 
 for (let i = 0; i < catalogList.length; i++) {
-    let card = catalog.item(i);
-    let name = card.querySelector(".card-title").textContent;
-    let img = card.querySelector("img").src;
-    let price = card.querySelector('.card-price').textContent;
-    let addBtn = card.querySelector('.add-btn');
-
     catalogItems.push(catalogList.item(i));
-    initialItems.push(catalogList.item(i));
+    initialItems.unshift(catalogList.item(i));
 }
 
 function getCardPrice(item) {
@@ -62,26 +57,48 @@ sortAscButtonCatalog.addEventListener('click', () => {
 });
 
 let unfilteredItems = [];
-filterbtn.addEventListener('click', () => {
+let upperBound = Number.MAX_VALUE;
+let lowerBound = 0;
+from.addEventListener('click', () => {
     if (unfilteredItems.length) {
         setCatalogItems([...unfilteredItems]);
         unfilteredItems = [];
     } else {
-        unfilteredItems = [...catalogItems];
+        unfilteredItems = [...items];
 
-        const lower = parseFloat(prompt('Нижняя граница:'));
-        if (isNaN(lower)) {
+        lowerBound = parseFloat(prompt('Нижняя граница:'));
+        if (isNaN(lowerBound)) {
+            lowerBound = 0;
             return;
         }
 
-        const upper = parseFloat(prompt('Верхняя граница:'));
-        if (isNaN(upper)) {
-            return;
-        }
-
+        alert(lowerBound)
+        alert(upperBound)
         setCatalogItems([...catalogItems.filter((item) => {
             const price = getCardPrice(item);
-            return price >= lower && price <= upper;
+            return price >= lowerBound && price <= upperBound;
+        })]);
+    }
+});
+
+to.addEventListener('click', () => {
+    if (unfilteredItems.length) {
+        setCatalogItems([...unfilteredItems]);
+        unfilteredItems = [];
+    } else {
+        unfilteredItems = [...items];
+
+        upperBound = parseFloat(prompt('Верхняя граница:'));
+        if (isNaN(upperBound)) {
+            upperBound = Number.MAX_VALUE;
+            return;
+        }
+
+        alert(lowerBound)
+        alert(upperBound)
+        setCatalogItems([...catalogItems.filter((item) => {
+            const price = getCardPrice(item);
+            return price >= lowerBound && price <= upperBound;
         })]);
     }
 });

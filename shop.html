@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="/src/js/basket.js" async></script>
     <script src="/src/js/filter.js" async></script>
+    <script src="/src/js/dropdown.js" async></script>
+    <script src="/src/js/showDescription.js" async></script>
     <title>GoBeauty</title>
 </head>
 <body>
@@ -45,33 +47,39 @@
     </header>
     <main>
         <header class="shop-header">
-                <h2>Новая коллекция натуральной косметики
-                    Добавь фильтр блять
-                </h2>
+                <h2>Новая коллекция натуральной косметики</h2>
         </header>
         <section class="filters">
-            <ul>
-                <li>
-                    <button class="catalog-sort-asc">
-                        <i class="fa-solid fa-arrow-up"></i>
-                    </button>
-                </li>
-                <li>
-                    <button class="catalog-sort-desc">
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </button>
-                </li>
-                <li>
-                    <button class="catalog-filter">
-                        <i class="fa-solid fa-filter"></i>
-                    </button>
-                </li>
-                <li>
-                    <button class="catalog-reset">
-                        <i class="fa-regular fa-circle-xmark"></i>
-                    </button>
-                </li>
-            </ul>
+            <button onclick="dropdown()" class="drop-filter"> Фильтры</button>
+            <div id="dropdown" class="dropdown-content">
+                <ul>
+                    <li>
+                        <button class="catalog-sort-asc">
+                            <h5>По возрастанию</h5>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="catalog-sort-desc">
+                            <h5>По убыванию</h5>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="catalog-from">
+                            <h5>От</h5>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="catalog-to">
+                            <h5>До</h5>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="catalog-reset">
+                            <h5>Отмена</h5>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </section>
         <section class="catalog">
                 <div class="catalog-card">
@@ -82,6 +90,9 @@
                         <button class="about-btn">
                             <h4>Подробнее</h4>
                         </button>
+                        <div class="card-descr">
+                            <p>Натуральный скраб из кубинского тростникового сахара</p>
+                        </div>
                         <button class="add-btn">
                             <h4>В корзину</h4>
                         </button>
@@ -96,6 +107,9 @@
                         <button class="about-btn">
                             <h4>Подробнее</h4>
                         </button>
+                        <div class="card-descr">
+                            <p>Крем для рук собственного производства</p>
+                        </div>
                         <button class="add-btn">
                             <h4>В корзину</h4>
                         </button>
@@ -110,6 +124,9 @@
                         <button class="about-btn">
                             <h4>Подробнее</h4>
                         </button>
+                        <div class="card-descr">
+                            <p>Пена для лица из инновационных компонентов, обеспечивающих омолаживающий эффект</p>
+                        </div>
                         <button class="add-btn">
                             <h4>В корзину</h4>
                         </button>
@@ -124,6 +141,9 @@
                         <button class="about-btn">
                             <h4>Подробнее</h4>
                         </button>
+                        <div class="card-descr">
+                            <p>Гель для душа с эффектом увлажнения</p>
+                        </div>
                         <button class="add-btn">
                             <h4>В корзину</h4>
                         </button>
@@ -138,6 +158,9 @@
                         <button class="about-btn">
                             <h4>Подробнее</h4>
                         </button>
+                        <div class="card-descr">
+                            <p>Укрепляющий витаминизированный шампунь</p>
+                        </div>
                         <button class="add-btn">
                             <h4>В корзину</h4>
                         </button>
@@ -152,6 +175,9 @@
                         <button class="about-btn">
                             <h4>Подробнее</h4>
                         </button>
+                        <div class="card-descr">
+                            <p>Натуральное мыло с экстрактом цитрусовых</p>
+                        </div>
                         <button class="add-btn">
                             <h4>В корзину</h4>
                         </button>
@@ -166,6 +192,9 @@
                         <button class="about-btn">
                             <h4>Подробнее</h4>
                         </button>
+                        <div class="card-descr">
+                            <p>Инновационный гель-желе для увлажнения и защиты лица</p>
+                        </div>
                         <button class="add-btn">
                             <h4>В корзину</h4>
                         </button>
@@ -180,6 +209,9 @@
                         <button class="about-btn">
                             <h4>Подробнее</h4>
                         </button>
+                        <div class="card-descr">
+                            <p>Жидкое мыло на натуральной</p>
+                        </div>
                         <button class="add-btn">
                             <h4>В корзину</h4>
                         </button>
@@ -206,9 +238,6 @@
                     </div>
                     <button class="basket-add-button">
                         <h4>Перейти к оформлению</h4>
-                    </button>
-                    <button class="basket-filter">
-                        <i class="fa-solid fa-filter"></i>
                     </button>
                 </div>
             </div>

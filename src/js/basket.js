@@ -173,31 +173,6 @@ sortDescButton.addEventListener('click', () => {
     setItems([...items.sort((item1, item2) => getItemPrice(item2) - getItemPrice(item1))]);
 });
 
-let unfiltered = [];
-filterButton.addEventListener('click', () => {
-    if (unfiltered.length) {
-        setItems([...unfiltered]);
-        unfiltered = [];
-    } else {
-        unfiltered = [...items];
-
-        const lower = parseFloat(prompt('Нижняя граница:'));
-        if (isNaN(lower)) {
-            return;
-        }
-
-        const upper = parseFloat(prompt('Верхняя граница:'));
-        if (isNaN(upper)) {
-            return;
-        }
-
-        setItems([...items.filter((item) => {
-            const price = getItemPrice(item);
-            return price >= lower && price <= upper;
-        })]);
-    }
-});
-
 
 //Utils
 function getBasketName(str) {

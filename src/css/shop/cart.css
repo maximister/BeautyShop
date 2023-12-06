@@ -136,10 +136,12 @@
     .item-head img {
         align-self: center;
         margin-top: 10px !important;
+        margin-bottom: 10px !important;
     }
 
     .item-controls {
         margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     .basket-add-button {
