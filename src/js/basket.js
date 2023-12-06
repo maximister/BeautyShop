@@ -60,7 +60,7 @@ function addCatalogItem(title, price, img) {
 
     const head = document.createElement('div');
     head.className = getItemName('head');
-    head.appendChild(createImg(img, 96, 96));
+    head.appendChild(createImg(img, 128, 128));
 
     const itemInfo = document.createElement('div');
     itemInfo.className = getItemName('info');
