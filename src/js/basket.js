@@ -1,5 +1,3 @@
-
-
 const basket = document.querySelector('#' + getBasketName());
 const endbtn = basket.querySelector('.' + getBasketName('add-button'));
 const clearButton = basket.querySelector('.' + getBasketName('clear-button'));

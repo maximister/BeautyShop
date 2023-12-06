@@ -1,4 +1,5 @@
 @import url(cart.css);
+@import url(filters.css);
 
 .shop-header {
     width: fit-content;
