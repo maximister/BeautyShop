@@ -1,0 +1,211 @@
+.reviews {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 100rem;
+    /* background-color: antiquewhite; */
+    background-color: white;
+    width: 97%;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    font-family: Roboto;
+    align-items: center;
+    font-size: 1.5em;
+    margin-left: 5px;
+    gap: 2rem;
+}
+
+.main-container a {
+    text-decoration: none;
+    background-color: black;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 1rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.text-container {
+    position: relative;
+}
+
+.main-container .text-container::after{
+    content: "";
+    border-bottom: 2px solid rgb(181, 145, 147);
+    display: block;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+.main-container a:hover {
+    background-color: rgb(181, 145, 147);
+}
+
+.main-container h5 {
+    width: fit-content;
+    height: fit-content;
+    margin: 0;
+}
+
+/*review gallery (slider)*/
+.slider {
+  width: 40%;
+  max-width: 600px;
+  min-width: 300px;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto;
+  
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.36);
+}
+
+
+.slide {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide .card-header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+  gap: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.slide .header-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-self: center;
+}
+
+.slide .card-text {
+  margin: 0 5px 0 5px;
+  display: flex;
+  align-self: center;
+}
+
+.slide h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.slide h3 {
+  font-size: 1.5em;
+}
+
+.slide h4 {
+  font-size: 1em;
+  color: rgb(181, 145, 147);
+}
+
+.slide img {
+  width: 100px;
+  height: 100px;
+  border-radius: 13px;
+  align-self: center;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  font-size: 18px;
+  visibility: hidden;
+  border: 1px black solid;
+}
+
+.slider:hover .btn{
+  visibility: visible;
+}
+
+.btn:active {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  top: 45%;
+  left: 2%;
+}
+
+.btn-next {
+  top: 45%;
+  right: 2%;
+}
+
+@media (max-width: 1300px) {
+  .slider img {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .reviews {
+      top: 175rem;
+      flex-direction: column;
+  }
+
+  .main-container {
+      width: 100%;
+  }
+
+  .slider {
+    margin-bottom: 20px;
+    min-width:500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .slider {
+    min-width: 250px;
+    height: 400px;
+  }
+
+  .slider img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .slide h3 {
+    font-size: 1em;
+  }
+  
+  .slide h4 {
+    font-size: 0.5em;
+  }
+}

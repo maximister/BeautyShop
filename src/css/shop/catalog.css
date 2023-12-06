@@ -1,0 +1,139 @@
+@import url(cart.css);
+
+.shop-header {
+    width: fit-content;
+    align-self: center;
+}
+
+.shop-header  h2 {
+    font-family: Roboto;
+    text-align: center !important;
+    text-transform: uppercase;
+
+    font-size: 28px;
+}
+
+.shop-header h2:after {
+    content: "";
+    margin-top: 10px;
+    border-bottom: 2px solid black;
+    display: block;
+
+    animation: both normal infinite 12s underline-animation ease-in-out;
+}
+
+@keyframes underline-animation {
+    from{
+        margin-right: auto;
+        margin-left: 0;
+        width: 0%;
+    }
+    25% {
+        width: 100%;
+    }
+    50% {
+        margin-right: 0;
+        margin-left: auto;
+        width: 0%;
+    }
+    75% {
+        width: 100%;
+    }
+    to {
+        margin-right: auto;
+        margin-left: 0;
+        width: 0%;
+    }
+}
+
+.catalog {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 100px;
+    width: 98%;
+    align-self: center;
+    justify-content:center;
+    gap: 4rem 4rem;
+}
+
+.catalog-card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Roboto;
+    transition: 0.5s;
+
+    border-radius: 1em;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.36);
+}
+
+.catalog-card:hover {
+    transform: scale(1.1);
+}
+
+.catalog-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 256px;
+    height: 256px;
+    border-radius: 1em;
+}
+
+.card-title {
+    width: 80%;
+}
+
+.catalog-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+
+    text-align: center;
+}
+
+.catalog-card .card-body h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.catalog-card .card-body h4 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.catalog-card .card-body button {
+    width: 100px;
+    height: 30px;
+    align-content: center;
+    justify-content: center;
+
+    background-color: white;
+    border: 1px black solid;
+}
+
+.catalog-card .card-body button:hover {
+    border: none;
+    color: white;
+    background-color: rgb(181, 145, 147);
+}
+
+.catalog-card .card-body button h4 {
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 300px) {
+    .shop-header  h2 {
+        font-size: 1.5em;
+    }
+}

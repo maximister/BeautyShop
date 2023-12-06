@@ -1,0 +1,30 @@
+.enter-info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    background-color: white;
+    width: 97%;
+    z-index: 4;
+    top: 52rem;
+}
+
+.enter-div {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.enter-div h2 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.enter-div p {
+    font-size: 1.5rem;
+    hyphens: auto;
+    text-align: center;
+    font-family: Roboto;
+}

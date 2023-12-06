@@ -1,0 +1,199 @@
+.header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 50;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    .header h1 {
+        margin-top: auto;
+        margin-bottom: auto;
+        }
+  
+    .header::before {
+      content: '';
+      position: absolute;
+  
+      background-color: rgb(255, 255, 255);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+  
+    .container{
+      max-width: 1280px;
+      margin: 0px auto;
+      padding: 0px 10px;
+    }
+    
+    .header-body{
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      color: #ded3d3;
+      height: 4em;
+    }
+    
+    .title{ 
+      flex: 1 0 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin: 5px 0 0 0;
+    }
+    
+    .header-text{
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 2px;
+      margin-left: 10px;
+      margin-bottom: 5px;
+
+      color: black !important;
+    }
+  
+    .title img{
+      position: relative;
+      width: 56px;
+      top: 0px;
+      height: 56px;
+      margin-right: 10px;
+    }
+    
+    header a{
+      text-decoration: none;
+      color: black !important;
+    }
+
+    header li:after {
+        content: "";
+        border-bottom: 1px solid rgb(181, 145, 147);
+        display: block;
+        width: 0px;
+        position: absolute;
+        top: -5px;
+        left: 50%;
+      }
+      
+      header li:hover:after {
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transition: all .3s ease-in-out;
+      }
+
+    header a:hover {
+        color: rgb(181, 145, 147) !important;
+    }
+  
+    .menu ul li a {
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .menu ul li {
+      margin: 0 20px;
+      position: relative;
+
+    }
+  
+     /* Стилизация пунктов меню */
+     .menu ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+  
+     /* Стилизация бургер-меню */
+     #menu-toggle {
+      display: none;
+    }
+    
+    .menu-icon {
+      display: none;
+      cursor: pointer;
+      padding: 10px;
+    }
+    
+    .menu-icon span {
+      background-color: black;
+      display: block;
+      height: 3px;
+      margin-bottom: 5px;
+      transition: all 0.3s ease;
+      width: 30px;
+    }
+
+    .menu {
+      display: inline-flex;
+      width: 100%;
+      justify-content: center;
+    }
+    
+    #menu-toggle:checked + .menu-icon span {
+      background-color:  rgb(181, 145, 147);
+    }
+    
+    #menu-toggle:checked + .menu-icon span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    #menu-toggle:checked + .menu-icon span:nth-child(2) {
+      opacity: 0;
+    }
+    
+    #menu-toggle:checked + .menu-icon span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  
+    @media (max-width: 1100px) {
+        header li:hover:after {
+            width: 0;
+        }
+
+      .menu ul {
+          display: none;
+      }
+      
+      .menu-icon {
+          display: block;
+      }
+    
+      nav .mobile-menu {
+        display: none;
+      }
+      
+      .mobile-menu ul {
+        padding: 20px 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      .mobile-menu ul li {
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(169, 159, 159, 0.568);
+      }
+    
+      .mobile-menu ul li a{
+        font-size: 32px;
+      }
+    
+      #menu-toggle:checked + .menu-icon + nav .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100vw;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        right: 0;
+      }
+    }

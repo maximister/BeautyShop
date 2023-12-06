@@ -1,0 +1,30 @@
+@import url(/src/css/header.css);
+@import url(welcomeblock.css);
+@import url(philosofy.css);
+@import url(reviews.css);
+@import url(enterinfo.css);
+@import url(footer-main.css);
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Roboto:wght@400;500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Montserrat&family=Roboto:wght@400;500;900&display=swap');
+
+body{
+    cursor: auto;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: Monserrat;
+
+    height: 100%;
+	
+    background: white;
+	font-size: 16px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    width: 99%;
+}

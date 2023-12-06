@@ -1,0 +1,41 @@
+@import url(/src/css/footer.css);
+
+footer {
+    position: absolute;
+    bottom: -105rem;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    .footer {
+        bottom: -210rem;
+        font-size: 18px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "about nav"
+        "shop contact";
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        bottom: -240rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .footer {
+        bottom: -250rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .footer {
+        bottom: -260rem;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .footer {
+        bottom: -270rem;
+    }
+}
