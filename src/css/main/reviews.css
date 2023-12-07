@@ -204,11 +204,11 @@
 
 @media (max-width: 500px) {
   .slider {
-    width: 300px;
+    width: 350px;
   }
 
   .slide {
-    min-width: 300px;
+    min-width: 350px;
     min-height: 300px;
   }
 
@@ -224,6 +224,36 @@
   
   .slide h4 {
     font-size: 20px;
+  }
+
+  .slide p {
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 370px) {
+  .slider {
+    width: 300px;
+  }
+
+  .slide {
+    min-width: 300px;
+    min-height: 300px;
+  }
+
+  .slider img {
+    width: 128px;
+    height: 128px;
+    margin-top: 15px;
+  }
+
+  .slide h3 {
+    font-size: 18px;
+  }
+  
+  .slide h4 {
+    font-size: 18px;
   }
 
   .slide p {
