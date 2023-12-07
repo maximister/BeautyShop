@@ -8,6 +8,7 @@
     width: 97%;
     z-index: 4;
     top: 68rem;
+    padding-bottom: 50px;
 
     font-family: Roboto;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.36);

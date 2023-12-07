@@ -18,24 +18,24 @@ footer {
 
 @media screen and (max-width: 768px) {
     .footer {
-        bottom: -240rem;
+        bottom: -220rem;
     }
 }
 
 @media screen and (max-width: 450px) {
     .footer {
-        bottom: -250rem;
+        bottom: -220rem;
     }
 }
 
 @media screen and (max-width: 390px) {
     .footer {
-        bottom: -260rem;
+        bottom: -225rem;
     }
 }
 
 @media screen and (max-width: 300px) {
     .footer {
-        bottom: -270rem;
+        bottom: -235rem;
     }
 }
