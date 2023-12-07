@@ -1,0 +1,202 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+.my-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.form-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    gap: 40px;
+
+    width: 400px;
+    min-height: 400px;
+    height: fit-content;
+
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.36);
+    background-color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.control-panel {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    outline: 2px black solid;
+}
+
+.go-back {
+    font-size: 28px;
+    padding: 3.2px;
+    color: black;
+    text-decoration: none;
+}
+
+.log-in, .reg {
+    padding: 10px;
+    border: none;
+
+    background: transparent;
+    font-size: 20px;
+}
+
+.log-in:hover, .reg:hover, .go-back:hover {
+    background-color: rgb(181, 145, 147);
+    color: white;
+}
+
+.log-form {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    min-height: 300px;
+    height: fit-content;
+
+    background-color: white;
+    outline: 2px solid black;
+    border-radius: 10px;
+
+}
+
+.log-form form {
+    margin-bottom: 30px;
+}
+
+.inputBox {
+    width: 90%;
+    margin-top: 20px;   
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+}
+
+.inputBox input::placeholder {
+    color: rgb(39, 38, 38);
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 35px;
+    letter-spacing: 1px;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: none;
+    outline: 1px solid black;
+
+    font-size: 16px;
+}
+
+.inputBox input[type="submit"] {
+    background-color: white;
+    color: black;
+    max-width: 130px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.inputBox input[type="submit"]:hover {
+    background-color: rgb(181, 145, 147);
+    color: white;
+    outline: none;
+}
+
+.form-text {
+    color: black;
+    text-align: center;
+}
+
+.form-text a {
+    color: black;  
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.form-text a:hover {
+    color: rgb(181, 145, 147);
+}
+
+.hidden {
+    display: none;
+}
+
+.wide {
+    max-width: fit-content !important;
+}
+
+.message {
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 440px) {
+    .form-container {
+        width: 300px;
+    }
+
+    .control-panel {
+        width: 280px;
+        align-self: center;
+        gap: 0;
+    }
+
+    .control-panel button {
+        font-size: 16px;
+    }
+
+    .log-in, .reg {
+        padding: 12px;
+    }
+
+    .log-form {
+        width: 280px;
+    }
+}
+
+@media (max-width: 320px) {
+    .form-container {
+        width: 250px;
+    }
+
+    .control-panel {
+        width: 220px;
+        align-self: center;
+        gap: 0;
+    }
+
+    .control-panel button {
+        font-size: 12px;
+    }
+
+    .log-in, .reg {
+        padding: 13.2px;
+    }
+
+    .log-form {
+        width: 220px;
+    }
+}
