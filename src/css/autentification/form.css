@@ -109,7 +109,7 @@
     font-size: 16px;
 }
 
-.inputBox input[type="submit"] {
+.inputBox input[type="button"] {
     background-color: white;
     color: black;
     max-width: 130px;
@@ -118,7 +118,7 @@
     font-weight: 600;
 }
 
-.inputBox input[type="submit"]:hover {
+.inputBox input[type="button"]:hover {
     background-color: rgb(181, 145, 147);
     color: white;
     outline: none;

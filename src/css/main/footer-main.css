@@ -30,12 +30,12 @@ footer {
 
 @media screen and (max-width: 390px) {
     .footer {
-        bottom: -225rem;
+        bottom: -240rem;
     }
 }
 
 @media screen and (max-width: 300px) {
     .footer {
-        bottom: -235rem;
+        bottom: -250rem;
     }
 }

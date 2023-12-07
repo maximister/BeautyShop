@@ -4,11 +4,10 @@ const regbtn = document.querySelector(".reg");
 const logdiv = document.querySelector(".login-form");
 const regdiv = document.querySelector(".reg-form");
 
- regdiv.classList.toggle("hidden");
+ regdiv.classList.add("hidden");
 
 logbtn.addEventListener('click', () => {
     logdiv.classList.remove("hidden");
-
     regdiv.classList.add("hidden");
 });
 
@@ -22,7 +21,7 @@ regbtn.addEventListener('click', () => {
 const logMessage = logdiv.querySelector(".message");
 const regMessage = regdiv.querySelector(".message");
 const loginBtn = logdiv.querySelector(".login-btn");
-const regBtn = regdiv.querySelector(".register-btn");
+const registrBtn = regdiv.querySelector(".register-btn");
 
 function loginButtonFunction() {
     const mail = logdiv.getElementsByTagName("input")[0].value;
@@ -44,6 +43,7 @@ function loginButtonFunction() {
     }
 
     logMessage.textContent = "Пользователь не обнаружен";
+    exit();
 }
 
 function regButtonFunction() {
@@ -75,7 +75,8 @@ function regButtonFunction() {
     }
 
     regMessage.textContent = "Для завершения регистрации необходимо подтвердить почту в личном кабинете";
+    return;
 }
 
 loginBtn.addEventListener('click', loginButtonFunction);
-regBtn.addEventListener('click', regButtonFunction);
+registrBtn.addEventListener('click', regButtonFunction);
