@@ -124,6 +124,7 @@
 
 .card-descr {
     display: none;
+    transition: 0.5s;
 }
 
 .show-descr {

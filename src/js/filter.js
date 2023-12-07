@@ -72,8 +72,6 @@ from.addEventListener('click', () => {
             return;
         }
 
-        alert(lowerBound)
-        alert(upperBound)
         setCatalogItems([...catalogItems.filter((item) => {
             const price = getCardPrice(item);
             return price >= lowerBound && price <= upperBound;
@@ -94,8 +92,6 @@ to.addEventListener('click', () => {
             return;
         }
 
-        alert(lowerBound)
-        alert(upperBound)
         setCatalogItems([...catalogItems.filter((item) => {
             const price = getCardPrice(item);
             return price >= lowerBound && price <= upperBound;

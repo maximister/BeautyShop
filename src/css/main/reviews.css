@@ -3,7 +3,6 @@
     flex-direction: row;
     position: absolute;
     top: 100rem;
-    /* background-color: antiquewhite; */
     background-color: white;
     width: 97%;
     gap: 1rem;
@@ -17,7 +16,6 @@
 
     font-family: Roboto;
     align-items: center;
-    font-size: 1.5em;
     margin-left: 5px;
     gap: 2rem;
 }
@@ -60,12 +58,12 @@
     margin: 0;
 }
 
-/*review gallery (slider)*/
 .slider {
   width: 40%;
   max-width: 600px;
   min-width: 300px;
-  height: 350px;
+  min-height: 350px;
+  height: auto;
   position: relative;
   overflow: hidden;
   border-radius: 15px;
@@ -81,7 +79,7 @@
 .slide {
   width: 100%;
   max-width: 800px;
-  height: 350px;
+  min-height: 350px;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -93,12 +91,9 @@
 .slide .card-header {
   display: flex;
   flex-direction: row;
-  margin-top: 15px;
-  gap: 10px;
-  width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  justify-content: start;
 }
 
 .slide .header-text {
@@ -120,17 +115,22 @@
 }
 
 .slide h3 {
-  font-size: 1.5em;
+  font-size: 24px;
 }
 
 .slide h4 {
-  font-size: 1em;
+  font-size: 20px;
   color: rgb(181, 145, 147);
 }
 
+.slider h3,h4,p {
+  word-wrap: normal;
+}
+
 .slide img {
-  width: 100px;
-  height: 100px;
+  width: 156px;
+  height: 156px;
+  margin-left: 20px;
   border-radius: 13px;
   align-self: center;
 }
@@ -170,7 +170,7 @@
 
 @media (max-width: 1300px) {
   .slider img {
-    margin-left: 10px;
+    margin-left: 15px;
   }
 }
 
@@ -184,28 +184,50 @@
       width: 100%;
   }
 
-  .slider {
+  .slide {
     margin-bottom: 20px;
-    min-width:500px;
+    min-width:400px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .slider {
+    width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .slider {
+    width: 400px;
   }
 }
 
 @media (max-width: 500px) {
   .slider {
-    min-width: 250px;
-    height: 400px;
+    width: 300px;
+  }
+
+  .slide {
+    min-width: 300px;
+    min-height: 300px;
   }
 
   .slider img {
-    width: 50px;
-    height: 50px;
+    width: 128px;
+    height: 128px;
+    margin-top: 15px;
   }
 
   .slide h3 {
-    font-size: 1em;
+    font-size: 22px;
   }
   
   .slide h4 {
-    font-size: 0.5em;
+    font-size: 20px;
+  }
+
+  .slide p {
+    margin-bottom: 15px;
+    font-size: 13px;
   }
 }

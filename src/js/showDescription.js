@@ -7,4 +7,10 @@ for (let i = 0; i < listOfCards.length; i++) {
     aboutBtn.addEventListener('click', () => {
         descr.classList.toggle("show-descr");
     });
+
+    card.addEventListener('mouseout', () => {
+        if (!card.matches(':hover')) {
+            descr.classList.remove("show-descr");
+        }
+    })
 }
