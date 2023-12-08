@@ -180,7 +180,7 @@
 
 @media  (max-width: 900px) {
     .service-element {
-        padding: 20px 0px 20px 0px;
+        padding: 20px 10px 20px 10px;
     }
 }
 
@@ -212,6 +212,5 @@
     .service, .price {
         padding: 0 !important;
         text-align: center;
-        /* font-size: 14px; */
     }
 }
