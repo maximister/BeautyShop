@@ -1,0 +1,211 @@
+.services-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    width: 100%;
+
+    gap: 50px;
+    background-color: white;
+    font-family: Roboto;
+}
+
+.services-wrapper h2, h3, h4, h5 {
+    margin: 0;
+}
+
+.service-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+
+    border-radius: 15px;
+    gap: 30px;
+    padding: 30px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.36);
+}
+
+.service-element .service-header {
+    font-size: 26px;
+}
+
+.master-list {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-self: center;
+    justify-content:center;
+    gap: 4rem 4rem;
+}
+
+.master-header {
+    font-size: 24px;
+}
+
+.master-card {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 10px 20px 10px;
+    transition: 0.5s;
+
+    border-radius: 1em;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.36);
+}
+
+.master-card:hover {
+    transform: scale(1.1);
+}
+
+.master-card:hover p {
+    display: block !important;
+}
+
+.master-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 128px;
+    height: 128px;
+    border-radius: 1em;
+}
+
+.master-name {
+    width: 80%;
+}
+
+.master-card .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+
+    text-align: center;
+}
+
+.master-card .card-body h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.master-card .card-body h4 {
+    font-size: 16px;
+    color: rgb(181, 145, 147);
+    margin: 0;
+}
+
+.master-card .card-body p {
+    display: none;
+    font-size: 14px;
+    color: black;
+    margin: 0;
+}
+
+.master-card .card-body h3, h4, p {
+    margin-top: 15px;
+}
+
+.master-card .card-body button {
+    width: 100px;
+    height: 30px;
+    align-content: center;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 10px;
+    border: 1px black solid;
+}
+
+.master-card .card-body button h4 {
+    color: black;
+    font-size: 14px;
+    margin: 0;
+}
+
+.master-card .card-body button:hover {
+    border: none;
+    background-color: rgb(181, 145, 147);
+}
+
+.master-card .card-body button:hover h4 {
+    color: white;
+}
+
+
+/*price list*/
+.price-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    width: 90%;
+}
+
+.price-row {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px black solid;
+
+}
+
+.price-row h4 {
+    margin: 0;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.service {
+    font-size: 20px;
+    color: black;
+}
+
+.price {
+    font-size: 20px;
+    color: rgb(181, 145, 147);
+}
+
+@media  (max-width: 700px) {
+    .service, .price {
+        font-size: 16px;
+    }
+}
+
+@media  (max-width: 540px) {
+    .price-list {
+        width: 98%;
+    }
+    .service, .price {
+        font-size: 14px;
+    }
+}
+
+@media  (max-width: 450px) {
+    .price-list {
+        width: 98%;
+    }
+
+    .price-row {
+        flex-flow: column wrap;
+        gap: 10px;
+    }
+
+    .service, .price {
+        padding: 0 !important;
+        text-align: center;
+        /* font-size: 14px; */
+    }
+}

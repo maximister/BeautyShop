@@ -1,13 +1,14 @@
 .navigation-panel {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    position: fixed;
     width: 95%;
+    gap: 20px;
 
-    background-color: white;
     font-family: Roboto;
+
+    z-index: 1;
 }
 
 .navigation-panel ul {
@@ -19,14 +20,13 @@
     padding-inline-start: 0;
 
     border: 2px black solid;
+    background-color: white;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 50px rgba(0, 0, 0, 0.36);
 }
 
 .navigation-panel li {
-    width: fit-content;
-    height: fit-content;
     padding: 20px;
 }
 
@@ -44,6 +44,69 @@
     background-color: rgb(181, 145, 147);
 }
 
+.cancel {
+    display: block;
+    font-size: 32px;
+    background: white;
+    border: none;
+    outline: 2px black solid;
+    padding: 6px 9px 6px 9px;
+    border-radius: 8px;
+    align-self: center;
+
+    margin-left: 50px;
+}
+
+.cancel:hover {
+    background-color: rgb(181, 145, 147);
+    color: white;
+    outline: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
 @media (max-width: 1200px) {
-    
+    .navigation-panel li a {
+        font-size: 16px;
+    }
+
+    .navigation-panel li {
+        padding: 20px 5px 20px 5px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navigation-panel {
+        flex-direction: column;
+        width: fit-content;
+        right: 30px;
+    }
+
+    .navigation-panel ul {
+        flex-direction: column;
+    }
+
+    .navigation-panel li a {
+        font-size: 20px;
+    }
+
+    .cancel {
+        display: block;
+        font-size: 32px;
+        background: white;
+        border: none;
+        outline: 2px black solid;
+        padding: 5px 8px 5px 8px;
+        border-radius: 8px;
+
+        align-self: flex-end;
+    }
+
+    .cancel:hover {
+        background-color: rgb(181, 145, 147);
+        color: white;
+        outline: none;
+    }
 }

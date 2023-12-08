@@ -7,6 +7,8 @@ footer {
     gap: 2rem 4rem;
     grid-template-areas: "about nav shop contact";
     margin-top: 50px;
+
+    z-index: 50;
 }
 
 footer a {

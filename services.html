@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/services/services-style.css">
-    <link rel="stylesheet" href="src/fontawesome-free-6.5.1-web/css/all.min.css">    
+    <link rel="stylesheet" href="src/fontawesome-free-6.5.1-web/css/all.min.css"> 
+    <script src="src/js/services-navigation.js" async></script>  
+    <script src="src/js/sign-up.js" async></script>   
     <title>GoBeauty</title>
 </head>
 <body>
@@ -42,18 +44,366 @@
         </div>
     </header>
     <aside class="navigation-panel">
-        <ul>
-            <li><a href="">Стрижки</a></li>
-            <li><a href="">Уход за бородой</a></li>
-            <li><a href="">Окрашивание</a></li>
-            <li><a href="">Косметология</a></li>
-            <li><a href="">Визаж</a></li>
-            <li><a href="">Массаж</a></li>
-            <li><a href="">Специальные услуги</a></li>
+        <button class="cancel"><i class="fa-regular fa-circle-xmark"></i></button>
+        <ul class="nav-list">
+            <li><a href="#barbers">Стрижки</a></li>
+            <li><a href="#beard">Уход за бородой</a></li>
+            <li><a href="#coloring">Окрашивание</a></li>
+            <li><a href="#cosmetics">Косметология</a></li>
+            <li><a href="#make-up">Визаж</a></li>
+            <li><a href="#massage">Массаж</a></li>
+            <li><a href="#specials">Специальные услуги</a></li>
         </ul>
     </aside>
     <main>
+        <div class="services-wrapper">
+            <!--Стрижки-->
+            <div class="service-element">
+                <h3 class="service-header" id="barbers">Стрижки</h3>
+                <h3 class="master-header">Наши мастера</h3>
 
+                <div class="master-list">
+                    <div class="master-card">
+                        <img src="/src/images/services/roman.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Роман Госляков</h3>
+                            <h4 class="experience">10 лет</h4>
+                            <p class="about">Основатель GoBeauty, специалист с опытом более 10 лет. Воплотит все ваши фантазии.</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="master-card">
+                        <img src="/src/images/services/lavrova.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Виктория Лаврова</h3>
+                            <h4 class="experience">7 лет</h4>
+                            <p class="about">Специализируется на женских стрижках. Выполнит даже самые сложные желания.</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="master-header">Услуги</h3>
+                <div class="price-list">
+                    <div class="price-row">
+                        <h4 class="service">Мужская стрижка</h4>
+                        <h4 class="price">1500<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Женская стрижка</h4>
+                        <h4 class="price">1500<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Комплексный уход за волосами</h4>
+                        <h4 class="price">2500<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Восстановление волос</h4>
+                        <h4 class="price">3500<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                </div>
+            </div>
+
+            <!--Уход за бородой-->
+            <div class="service-element">
+                <h3 class="service-header" id="beard">Уход за бородой</h3>
+                <h3 class="master-header">Наши мастера</h3>
+
+                <div class="master-list">
+                    <div class="master-card">
+                        <img src="/src/images/services/murad.png">
+                        <div class="card-body">
+                            <h3 class="master-name">Мурад Рамазанов</h3>
+                            <h4 class="experience">5 лет</h4>
+                            <p class="about">Лучший стилист города, специализирующийся на бородах</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="master-header">Услуги</h3>
+                <div class="price-list">
+                    <div class="price-row">
+                        <h4 class="service">Бритье</h4>
+                        <h4 class="price">750<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Уход за бородой</h4>
+                        <h4 class="price">1000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Окрашивание бороды</h4>
+                        <h4 class="price">1300<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Окрашивание-->
+            <div class="service-element">
+                <h3 class="service-header" id="coloring">Окрашивание</h3>
+                <h3 class="master-header">Наши мастера</h3>
+
+                <div class="master-list">
+                    <div class="master-card">
+                        <img src="/src/images/services/roman.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Роман Госляков</h3>
+                            <h4 class="experience">10 лет</h4>
+                            <p class="about">Основатель GoBeauty, специалист с опытом более 10 лет. Воплотит все ваши фантазии.</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="master-card">
+                        <img src="/src/images/services/lavrova.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Виктория Лаврова</h3>
+                            <h4 class="experience">7 лет</h4>
+                            <p class="about">Специализируется на женских стрижках. Выполнит даже самые сложные желания.</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="master-card">
+                        <img src="/src/images/services/stas.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Станислав Васильев</h3>
+                            <h4 class="experience">4 года</h4>
+                            <p class="about">Самый одиозный специалист Москвы - справится с любым креативным окрашиванием</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+
+                <h3 class="master-header">Услуги</h3>
+                <div class="price-list">
+                    <div class="price-row">
+                        <h4 class="service">Осветление</h4>
+                        <h4 class="price">7500<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Осветление + окрашивание</h4>
+                        <h4 class="price">10000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Креативное окрашивание</h4>
+                        <h4 class="price">20000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Окрашивание + восстановление волос</h4>
+                        <h4 class="price">12000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Косметология-->
+            <div class="service-element">
+                <h3 class="service-header" id="cosmetics">Косметология</h3>
+                <h3 class="master-header">Наши мастера</h3>
+
+                <div class="master-list">
+                    <div class="master-card">
+                        <img src="/src/images/services/podnebesniy.png">
+                        <div class="card-body">
+                            <h3 class="master-name">Алексей Поднебесный</h3>
+                            <h4 class="experience">20 лет</h4>
+                            <p class="about">Один из лучших специалистов мира, более 10 лет работал в престижном салоне Парижа</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="master-card">
+                        <img src="/src/images/services/revva.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Александра Верра</h3>
+                            <h4 class="experience">35 лет</h4>
+                            <p class="about">Один из самых опытных специалистов России со стажем более 35 лет</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="master-header">Услуги</h3>
+                <div class="price-list">
+                    <div class="price-row">
+                        <h4 class="service">Плазмотерапия</h4>
+                        <h4 class="price">10000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Диагностика кожи</h4>
+                        <h4 class="price">12000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Лазерное омоложение</h4>
+                        <h4 class="price">35000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Визаж-->
+            <div class="service-element">
+                <h3 class="service-header" id="make-up">Визаж</h3>
+                <h3 class="master-header">Наши мастера</h3>
+
+                <div class="master-list">
+                    <div class="master-card">
+                        <img src="/src/images/services/artas.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Виталий Цаль</h3>
+                            <h4 class="experience">13 лет</h4>
+                            <p class="about">Профессиональный визажись из Винницы</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="master-header">Услуги</h3>
+                <div class="price-list">
+                    <div class="price-row">
+                        <h4 class="service">Деловой макияж</h4>
+                        <h4 class="price">2400<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Вечерний макияж</h4>
+                        <h4 class="price">3000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Свадебный макияж</h4>
+                        <h4 class="price">5600<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Визаж-->
+            <div class="service-element">
+                <h3 class="service-header" id="massage">Массаж</h3>
+                <h3 class="master-header">Наши мастера</h3>
+
+                <div class="master-list">
+                    <div class="master-card">
+                        <img src="/src/images/services/billie.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Борис Харитонович</h3>
+                            <h4 class="experience">15 лет</h4>
+                            <p class="about">Профессиональный массажист из Сербии, специалист с мировым именем</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="master-header">Услуги</h3>
+                <div class="price-list">
+                    <div class="price-row">
+                        <h4 class="service">Расслабляющий массиж</h4>
+                        <h4 class="price">2400<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Спортивный массаж</h4>
+                        <h4 class="price">4000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Тайский массаж</h4>
+                        <h4 class="price">3200<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                </div>
+            </div>
+
+            <!--Спеиальные услуги-->
+            <div class="service-element">
+                <h3 class="service-header" id="specials">Специальные услуги</h3>
+                <h3 class="master-header">Наши мастера</h3>
+
+                <div class="master-list">
+                    <div class="master-card">
+                        <img src="/src/images/services/roman.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Роман Госляков</h3>
+                            <h4 class="experience">10 лет</h4>
+                            <p class="about">Специализируется на полной смене внешности и стиля</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="master-card">
+                        <img src="/src/images/services/stepanova.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Вероника Степанова</h3>
+                            <h4 class="experience">17 лет</h4>
+                            <p class="about">Профессиональный психолог и психологичский тренер, помогает менять свои привычки, образ жизни и образ мышления</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="master-card">
+                        <img src="/src/images/services/burunov.jpg">
+                        <div class="card-body">
+                            <h3 class="master-name">Сергей Бурундуков</h3>
+                            <h4 class="experience">23 года</h4>
+                            <p class="about">Лучший пластический хирург страны</p>
+                            <button class="sign-in">
+                                <h4>Записаться</h4>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="master-header">Услуги</h3>
+                <div class="price-list">
+                    <div class="price-row">
+                        <h4 class="service">Полная смена имиджа</h4>
+                        <h4 class="price">от 75000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Смена имиджа и повадок</h4>
+                        <h4 class="price">от 150000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                    <div class="price-row">
+                        <h4 class="service">Пластическая хирургия</h4>
+                        <h4 class="price">от 500000<i class="fa-solid fa-ruble-sign"></i></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="autorize hidden">
+            <div class="form-container">
+                    <a class="go-back">
+                        <i class="fa-sharp fa-solid fa-circle-arrow-left"></i>
+                    </a>
+                    <div class="serv-form">
+                        <form>
+                            <p class="form-text message">Для записи на услуги необходимо войти</p>
+                            <div class="inputBox">
+                                <a href="autentification.html" class="button">Войти</a>
+                            </div>
+                        </form>
+                    </div>
+
+        </section>
     </main>
     <footer class="footer">
         <div class="about">
